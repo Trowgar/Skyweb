@@ -5,6 +5,11 @@
     max-width: 1920px;
     margin: 0 auto;
     transition: margin-top 0.2s ease-out;
+    margin-top: 0;
+
+    &.navbar-active{
+        margin-top: 190px;
+    }
 
     .product-page {
         display: flex;
@@ -200,7 +205,7 @@
                 background-color: #FFFF;
                 display: flex;
                 flex-direction: row;
-                align-items: flex-start;
+                text-align: left;
                 justify-content: space-between;
                 padding: 10px 20px 10px 0;
                 border: 0;
@@ -241,6 +246,16 @@
                     transform: rotate(0);
                     transition: transform 0.2s linear;
                 }
+            }
+
+            .show{
+                max-height: 500px;
+                transition: max-height .2s ease-in;
+            }
+
+            .hidden{
+                max-height: 0;
+                transition: max-height .2s ease-out;
             }
         }
     }

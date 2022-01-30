@@ -25,12 +25,8 @@ html, body {
 .container {
     display: flex;
     flex-direction: row;
-    width: 2080px;
+    width: 1400px;
     margin: 0 auto;
-
-    .user-panel {
-        margin-left: auto;
-    }
 
     @media (max-width: 767px) {
         justify-content: space-between;

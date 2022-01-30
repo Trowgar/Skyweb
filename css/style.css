@@ -22,11 +22,8 @@ html, body {
 .container {
   display: flex;
   flex-direction: row;
-  width: 2080px;
+  width: 1400px;
   margin: 0 auto;
-}
-.container .user-panel {
-  margin-left: auto;
 }
 @media (max-width: 767px) {
   .container {
@@ -41,7 +38,7 @@ html, body {
   background-color: black;
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  align-items: center;
   padding: 10px 0;
 }
 @media (max-width: 480px) {
@@ -49,21 +46,24 @@ html, body {
     padding: 5px 0;
   }
 }
-.header .top-bar * {
+.header .top-bar .user-panel {
+  margin-left: auto;
+}
+.header .top-bar .user-panel * {
   color: #FFFF;
   font-size: 14px;
   margin-right: 10px;
   text-transform: uppercase;
 }
-.header .top-bar *:hover {
+.header .top-bar .user-panel *:hover {
   color: #c41429;
 }
 @media (max-width: 480px) {
-  .header .top-bar * {
+  .header .top-bar .user-panel * {
     font-size: 10px;
   }
 }
-.header .top-bar * :last-child {
+.header .top-bar .user-panel * :last-child {
   margin-right: 20px;
 }
 .header .navbar {
@@ -133,12 +133,13 @@ html, body {
 @media (max-width: 767px) {
   .header .navbar .menu-list a {
     margin-top: 15px;
+    margin-left: 0;
   }
 }
 @media (max-width: 767px) {
   .header .navbar .menu-list {
     position: absolute;
-    height: 0;
+    height: 0px;
     overflow: hidden;
     flex-direction: column;
     top: 105px;
@@ -146,6 +147,10 @@ html, body {
     background-color: white;
     width: 100%;
     border-bottom: 0;
+  }
+  .header .navbar .menu-list.menu-active {
+    height: 190px;
+    transition: max-height 0.2s ease-in;
   }
 }
 .header .navbar .menu-link {
@@ -166,6 +171,7 @@ html, body {
 @media (max-width: 767px) {
   .header .navbar .cart {
     margin-right: 0;
+    padding: 0;
   }
 }
 
@@ -176,6 +182,10 @@ html, body {
   max-width: 1920px;
   margin: 0 auto;
   transition: margin-top 0.2s ease-out;
+  margin-top: 0;
+}
+.content.navbar-active {
+  margin-top: 190px;
 }
 .content .product-page {
   display: flex;
@@ -370,7 +380,7 @@ html, body {
   background-color: #FFFF;
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  text-align: left;
   justify-content: space-between;
   padding: 10px 20px 10px 0;
   border: 0;
@@ -407,6 +417,14 @@ html, body {
 .content .description .about .not-active img {
   transform: rotate(0);
   transition: transform 0.2s linear;
+}
+.content .description .about .show {
+  max-height: 500px;
+  transition: max-height 0.2s ease-in;
+}
+.content .description .about .hidden {
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
 }
 
 /*# sourceMappingURL=style.css.map */
