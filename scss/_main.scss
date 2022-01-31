@@ -17,15 +17,10 @@ $grey: #eaeaea;
 }
 
 html, body {
-    height: 100%;
     display: flex;
+    height: 100%;
     flex-direction: column;
-    font-family: 'Questrial', sans-serif;
-}
-
-
-.page {
-    min-height: 100%;
+    font-family: $Questrial;
 }
 
 .container {
