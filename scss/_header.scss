@@ -1,5 +1,5 @@
 .header {
-    border-bottom: 1px #eaeaea solid;
+    border-bottom: 1px $grey solid;
 
     .top-bar {
         background-color: black;
@@ -22,7 +22,7 @@
                 text-transform: uppercase;
     
                 &:hover{
-                    color: #c41429;
+                    color: $red;
                 }
                 
      
@@ -98,11 +98,11 @@
             
             a{
                 align-self: center;
+                align-items: center;
                 margin-left: 20px;
-                font-size: 16px;
                 text-transform: uppercase;
                 color: rgb(68, 67, 67);
-                font-family: 'Montserrat', sans-serif;
+                font-family: $Montserrat;
 
                 @media (max-width: 767px) {
                     margin-top: 15px;
@@ -119,7 +119,6 @@
                 left: 0;
                 background-color: white;
                 width: 100%;
-                border-bottom: 0;
                 
                 
 
@@ -131,10 +130,11 @@
         }
 
         .menu-link {
-            font-family: 'Questrial', sans-serif;
+            font-family: $Questrial;
             font-weight: bold;
+            
             :hover {
-                color: #c41429;
+                color: $red;
             }
         }
 
@@ -143,7 +143,7 @@
             padding: 0 0.6rem;
 
             &:hover{
-                background-color: #eaeaea;
+                background-color: $grey;
                 border-radius: 5px;
             }
 
